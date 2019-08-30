@@ -67,7 +67,6 @@ animation:showSlowlyElement 700ms;
 .icon.folder.full:before{height:0.55em;}
 .icon.folder.full:after{height:2.15em;box-shadow:0 -0.12em 0 0 #afafaf;}
 .icon.file{width:2.5em;height:3em;line-height:3em;text-align:center;border-radius:0.25em;color:#FFF;display:inline-block;margin:0.9em 1.2em 0.8em 1.3em;position:relative;overflow:hidden;box-shadow:1.74em -2.1em 0 0 #A4A7AC inset;}
-.icon.file:first-line{font-size:13px;font-weight:700;}
 .icon.file:after{content:'';position:absolute;z-index:-1;border-width:0;border-bottom:2.6em solid #DADDE1;border-right:2.22em solid rgba(0,0,0,0);top:-34.5px;right:-4px;}
 .icon.file.f-avi,.icon.file.f-flv,.icon.file.f-mkv,.icon.file.f-mov,.icon.file.f-mpeg,.icon.file.f-mpg,.icon.file.f-mp4,.icon.file.f-m4v,.icon.file.f-wmv{box-shadow:1.74em -2.1em 0 0 #7e70ee inset;}
 .icon.file.f-avi:after,.icon.file.f-flv:after,.icon.file.f-mkv:after,.icon.file.f-mov:after,.icon.file.f-mpeg:after,.icon.file.f-mpg:after,.icon.file.f-mp4:after,.icon.file.f-m4v:after,.icon.file.f-wmv:after{border-bottom-color:#5649c1;}
