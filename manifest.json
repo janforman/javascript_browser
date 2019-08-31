@@ -1,5 +1,5 @@
 {
-    "name": "File Browser",
+    "name": "Javascript Browser",
 	"icons": [
 		{
 	    "src": "/favicon.png",
@@ -7,6 +7,6 @@
     "type": "image\/png"
     }
 ],
-"theme_color": "#ffffff",
+"theme_color": "#373743",
 "display": "standalone"
 }
