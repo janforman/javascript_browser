@@ -7,7 +7,7 @@
     <title>Javascript Browser</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/fancybox/jquery.fancybox.min.css" />
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="manifest.json">
     <script src="assets/js/jquery-1.10.0.min.js"></script>
     <script src="assets/js/script.js" charset="UTF-8"></script>
     <script src="assets/fancybox/jquery.fancybox.min.js" charset="UTF-8"></script> 
