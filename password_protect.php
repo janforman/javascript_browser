@@ -86,7 +86,7 @@ if (isset($_POST['access_password'])) {
   }
   else {
     // set cookie if password was validated
-    setcookie("verify", md5($login.'%'.$pass), $timeout, '/');
+    setcookie("verify", sha1($login.'%'.$pass), $timeout, '/');
     
     // Some programs (like Form1 Bilder) check $_POST array to see if parameters passed
     // So need to clear password protector variables
@@ -108,11 +108,11 @@ else {
   $found = false;
   foreach($LOGIN_INFORMATION as $key=>$val) {
     $lp = (USE_USERNAME ? $key : '') .'%'.$val;
-    if ($_COOKIE['verify'] == md5($lp)) {
+    if ($_COOKIE['verify'] == sha1($lp)) {
       $found = true;
       // prolong timeout
       if (TIMEOUT_CHECK_ACTIVITY) {
-        setcookie("verify", md5($lp), $timeout, '/');
+        setcookie("verify", sha1($lp), $timeout, '/');
       }
       break;
     }
