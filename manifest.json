@@ -4,9 +4,10 @@
 		{
 	    "src": "favicon.png",
 	"sizes": "192x192",
-    "type": "image\/png"
+    "type": "image/png"
     }
 ],
 "theme_color": "#373743",
+"background_color": "#373743",
 "display": "standalone"
 }
