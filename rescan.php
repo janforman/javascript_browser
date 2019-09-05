@@ -1,5 +1,5 @@
 <?php
-require('password_protect.php');
+require('auth.php');
 header("Expires: 0");
 $dir = "files";
 $response = scan($dir);
@@ -24,7 +24,7 @@ function scan($dir) {
 	return $files;
 }
 $txt = json_encode(array("name" => $dir, "type" => "folder", "path" => $dir, "filenum" => $c, "items" => $response));
-$code = "<?php require('password_protect.php');
+$code = "<?php require('auth.php');
 header('Expires: 0');
 header('Content-Encoding: gzip');
 header('Content-type: application/json'); ?>";

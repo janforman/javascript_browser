@@ -1,8 +1,8 @@
-<?php require('password_protect.php'); ?>
+<?php require('auth.php'); ?>
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">	
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Javascript Browser</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
