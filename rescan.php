@@ -29,7 +29,7 @@ header('Expires: 0');
 header('Content-Encoding: gzip');
 header('Content-type: application/json'); ?>";
 $gzip_size = strlen($txt);
-$gzip_final = "\x1f\x8b\x08\x00\x00\x00\x00\x00" . substr(gzcompress($txt, 6), 0, - 4). pack('V', crc32($txt)). pack('V', $gzip_size);
+$gzip_final = "\x1f\x8b\x08\x00\x00\x00\x00\x00" . substr(gzcompress($txt, 9), 0, - 4). pack('V', crc32($txt)). pack('V', $gzip_size);
 $fopen = fopen("scan.php", "w")or die("Unable to open file!");
 fwrite($fopen, $code . $gzip_final);
 fclose($fopen);
