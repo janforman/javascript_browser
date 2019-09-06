@@ -1,4 +1,6 @@
 <?php
+ob_end_flush();
+ob_implicit_flush();
 require('auth.php');
 $file = $_GET['f'];
 (new Model_DownloadableFile($file))->download_file_in_browser();
