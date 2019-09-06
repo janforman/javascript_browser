@@ -103,7 +103,7 @@ public function download_file_in_browser() {
             fseek($fp, $start);
         }
         while ($length) {
-            $read = ($length > 16384) ? 16384 : $length;
+            $read = ($length > 65536) ? 65535 : $length;
             $length -= $read;
             echo(fread($fp, $read));
             @ob_flush();
