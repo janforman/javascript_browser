@@ -102,10 +102,11 @@ public function download_file_in_browser() {
         if ($start) {
             fseek($fp, $start);
         }
-        while ($length) { // Read in blocks of 8KB so we don't chew up memory on the server
-            $read = ($length > 8192) ? 8192 : $length;
+        while ($length) {
+            $read = ($length > 16384) ? 16384 : $length;
             $length -= $read;
             print(fread($fp, $read));
+            usleep(30000);
         }
         fclose($fp);
     } else {
