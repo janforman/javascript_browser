@@ -30,6 +30,7 @@
     </div>
     <script type="text/javascript">
     $.fancybox.defaults.hash = false;
+    $.fancybox.defaults.buttons = ['zoom','slideShow','download','close'];
     </script>
   </body>
 </html>
