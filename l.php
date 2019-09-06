@@ -95,7 +95,7 @@ public function download_file_in_browser() {
     if ($partial) {
         header('HTTP/1.1 206 Partial Content');
         header("Content-Range: bytes $start-$end/$filesize");
-        if (!$fp = fopen($this->full_path, 'r')) { // Error out if we can't read the file
+        if (!$fp = fopen($this->full_path, 'rb')) { // Error out if we can't read the file
             header("HTTP/1.1 500 Internal Server Error");
             exit;
         }
@@ -105,8 +105,10 @@ public function download_file_in_browser() {
         while ($length) {
             $read = ($length > 16384) ? 16384 : $length;
             $length -= $read;
-            print(fread($fp, $read));
-            usleep(30000);
+            echo(fread($fp, $read));
+            @ob_flush();
+            flush();
+            usleep(20000);
         }
         fclose($fp);
     } else {
