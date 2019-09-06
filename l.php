@@ -108,7 +108,6 @@ public function download_file_in_browser() {
             echo(fread($fp, $read));
             @ob_flush();
             flush();
-            usleep(20000);
         }
         fclose($fp);
     } else {
