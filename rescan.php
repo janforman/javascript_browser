@@ -33,3 +33,4 @@ $gzip_final = "\x1f\x8b\x08\x00\x00\x00\x00\x00" . substr(gzcompress($txt, 9), 0
 $fopen = fopen("scan.php", "w")or die("Unable to open file!");
 fwrite($fopen, $code . $gzip_final);
 fclose($fopen);
+echo 'OK Total files: '.$c;
