@@ -16,7 +16,7 @@ function scan($dir) {
 			if(is_dir($dir . '/' . $f)) {
 				$files[] = array("name" => $f, "type" => "folder", "path" => $dir . '/' . $f, "items" => scan($dir . '/' . $f));
 			} else {
-				$files[] = array("name" => $f, "type" => "file", "path" => $dir . '/' . $f, "size" => filesize($dir . '/' . $f));
+				$files[] = array("name" => $f, "type" => "file", "path" => $dir . '/' . $f, "size" => sprintf("%u",filesize($dir . '/' . $f)));
 				$c ++;
 			}
 		}
