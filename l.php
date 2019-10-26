@@ -47,7 +47,7 @@ public function download_file_in_browser() {
     }
 
     // Get the data range requested (if any)
-    $filesize = filesize($this->full_path);
+    $filesize = sprintf("%u",filesize($this->full_path));
     $length = $filesize;
     if ($range) {
         $partial = true;
